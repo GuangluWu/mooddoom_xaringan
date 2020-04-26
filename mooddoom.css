@@ -1,0 +1,77 @@
+.journal {
+  font-size: 70%;
+}
+
+.journal a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: .5;
+  color: rgb(249, 38, 114);
+  text-decoration: none;
+}
+
+
+.remark-code-line-highlighted  { background-color: #f8f8bb; }
+
+.remark-inline-code{
+  /* background: #F5F5F5; /* lighter */
+  background: #e7e8e2; /* darker */
+  border-radius: 3px;
+  padding: 4px;
+}
+
+/* Make bold syntax compile to RU-red */
+
+.red {
+  color: #cc0033;
+}
+
+/* Add blue tag */
+.blue {
+  color: #0000CC;
+  font-weight: bold;
+}
+
+/* Add grey tag */
+.grey {
+  color: #515151;
+}
+
+.lightgrey {
+  color: #818181;
+}
+
+/* Force black */
+.black {
+  color: black;
+  font-weight: bold;
+}
+
+/* Add white tag */
+.white {
+  color: white;
+}
+
+
+/* Font size tags */
+.big {
+  font-size: 1.5em;
+}
+
+/* ru blockquote */
+ru-blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-left: solid 10px #78C0A8;
+  background-color: #EDEDED;
+  padding: 1em;
+  color: #555555;
+  -moz-border-radius: 5px; /* firefox */
+  -webkit-border-radius: 5px; /* safari, chrome */
+}
