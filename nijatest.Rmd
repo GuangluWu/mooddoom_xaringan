@@ -6,6 +6,7 @@ institute: "Starlinks"
 date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
     css: [default, "mooddoom.css", default-fonts]
     #css: ["rutgers", "rutgers-fonts"]
     yolo: false
@@ -39,6 +40,78 @@ class: center, middle
 class: inverse, center, middle
 
 # Get Started
+
+---
+class: center
+# comment and quote
+
+> This is a comment in this slide which you can't see.
+
+<ru-blockquote> `[//]: # (There is a comment below)` </ru-blockquote> 
+
+[//]: # (I'm a comment)
+
+<ru-blockquote> `[//]: # (There is a comment above)` </ru-blockquote> 
+---
+class: center, middle
+name: dreamland
+
+# Slide label to be cited in next slide
+
+**See you soon!**
+
+---
+class: center, middle, inverse
+count: false
+
+# Here we go
+
+[**Coming**](#dreamland})
+
+And this slide will not be counted (the bottomright is the same as the last slide)
+---
+template: dreamland
+
+You can also template the [**labelled slide**](#dreamland)
+---
+layout: true
+class: inverse, center, middle
+
+# Section
+
+---
+
+## Sub section 1
+
+### Use layout template
+
+---
+## Sub section 2
+
+### To stop layout: add .red[layout: false] in next slide
+
+---
+layout: false
+class: center
+# Video
+
+.pull-left[<iframe width="560" height="315" src="https://www.youtube.com/embed/8fKKiaSLLEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]
+
+.pull-right[
+Video code obtained from Youtube share menu
+]
+
+
+.left[Left-aligned text]
+
+.center[Centered text]
+
+.right[Right-aligned text]
+
+???
+
+
+Video embed code from YouTube share menu
 
 ---
 
@@ -806,4 +879,30 @@ pagedown::chrome_print("path/to/your/slides.Rmd")
 
 # or just pass the HTML output file path to chrome_print()
 pagedown::chrome_print("path/to/your/slides.html")
+```
+---
+# Set up a hook to save **rgl** plots:
+
+```{r, setup2, echo=FALSE}
+library(rgl)
+```
+
+.pull-left[hook cause some problem, use a method from [here](https://stackoverflow.com/questions/31324277/you-must-enable-javascript-to-view-this-page-properly-error-knitr-rgl)]
+
+.pull-right[
+```{r, test-rgl}
+x <- sort(rnorm(1000))
+y <- rnorm(1000)
+z <- rnorm(1000) + atan2(x,y)
+plot3d(x, y, z, col = rainbow(1000))
+rglwidget()
+```
+]
+---
+```{r, test-rgl2, echo=FALSE}
+x <- sort(rnorm(1000))
+y <- rnorm(1000)
+z <- rnorm(1000) + atan2(x,y)
+plot3d(x, y, z, col = rainbow(1000))
+rglwidget()
 ```

@@ -17,6 +17,7 @@ a:hover {
 .remark-code-line-highlighted  { background-color: #f8f8bb; }
 
 .remark-inline-code{
+  color: rgb(249, 38, 114);
   /* background: #F5F5F5; /* lighter */
   background: #e7e8e2; /* darker */
   border-radius: 3px;
